@@ -1,1 +1,14 @@
+<script>
+const API_KEY = "YOUR_SECRET";
 
+async function addImage() {
+    const src = prompt("Image URL (e.g., https://i.ibb.co/...):");
+    const cat = prompt("Category (wedding/family/portrait):");
+    const title = prompt("Title:");
+    
+    await fetch(`${API_URL}/api/add?key=${API_KEY}&src=${src}&cat=${cat}&title=${title}`);
+    alert("Image added!");
+}
+</script>
+
+<button onclick="addImage()">➕ Add Image</button>
