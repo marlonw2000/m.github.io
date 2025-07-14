@@ -1,3 +1,9 @@
+// In gallery.js
+fetch('data/images.json')
+    .then(response => response.json())
+    .then(images => renderGallery(images));
+
+
 const API_URL = "https://your-repl-name.username.repl.co";
 
 async function loadGallery() {
