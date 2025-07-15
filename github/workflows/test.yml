@@ -1,1 +1,11 @@
+name: Test Self-Hosted Runner
+on: [push]
+jobs:
+  test-job:
+    runs-on: self-hosted  # This makes it run on your Google Cloud VM
+    steps:
+      - name: Check VM connection
+        run: |
+          echo "Hello from Google Cloud VM!"
+          echo "Docker version: $(docker --version)"
 
